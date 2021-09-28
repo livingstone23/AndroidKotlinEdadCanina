@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 resultText.text = "Tu edad canina es de  $result años"
             } else {
                 Log.d("MainActivity", "Age string is empty")
+                Toast.makeText(this, "Debes insertar tu edad",Toast.LENGTH_SHORT).show()
             }
         }
     }
