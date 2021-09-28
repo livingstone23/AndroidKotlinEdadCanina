@@ -18,9 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             val ageString = ageEdit.text.toString()
-            val ageInt = ageString.toInt()
-            val result = ageInt * 7
-            resultText.text = "Tu edad canina es de  $result años"
+
+            if (ageString.isNotEmpty()){
+                val ageInt = ageString.toInt()
+                val result = ageInt * 7
+                resultText.text = "Tu edad canina es de  $result años"
+            }
         }
     }
 }
