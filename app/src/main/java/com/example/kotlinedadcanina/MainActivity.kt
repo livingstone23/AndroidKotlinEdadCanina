@@ -7,15 +7,19 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.kotlinedadcanina.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val ageEdit = findViewById<EditText>(R.id.age_edit)
-        val resultText = findViewById<TextView>(R.id.result_text)
-        val button = findViewById<Button>(R.id.button)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        val ageEdit = binding.ageEdit
+        val resultText = binding.resultText
+        val button = binding.button
 
         Log.d("MainActivity", "Activity Created")
 
